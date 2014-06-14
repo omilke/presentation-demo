@@ -34,20 +34,19 @@
         <link rel="stylesheet" href="lib/highlight/styles/default.css">
         <script src="lib/highlight/highlight.pack.js"></script>
         <script>hljs.initHighlightingOnLoad();</script>
-        
+
     </head>
     <body>
         <div class="deck-container">
 
             <!-- Begin slides. Just make elements with a class of slide. -->
-            <section id="intro" class="slide lazyload">
+            <section class="slide">
                 <h1>Slide</h1>
-                
+
                 <p>Story content</p>
             </section>
-            
-            
 
+            @@include('chapters.html')
 
             <!-- End slides. -->
 
@@ -87,7 +86,7 @@
         <script src="extensions/status/deck.status.js"></script>
         <script src="extensions/navigation/deck.navigation.js"></script>
         <script src="extensions/scale/deck.scale.js"></script>
-        
+
         <script src="extensions/deck.events.js"></script>
         <script src="extensions/deck.lazyload.js"></script>
 
