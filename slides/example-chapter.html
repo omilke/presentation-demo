@@ -1,0 +1,70 @@
+            <section class="slide">
+                <h1>Slide</h1>
+                
+                <p>Story content</p>
+            </section>
+
+            <section class="slide">
+                <h1>Content</h1>
+            </section>
+
+            <section class="slide">
+                <h1>Here</h1>
+                
+                <pre><code class="java">
+package de.omilke.banking.account.view;
+
+import java.math.BigDecimal;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+
+/**
+ * Serializable DTO for usage in the REST API.
+ *
+ * @author omilke &lt;ollimi85@gmail.com&gt;
+ */
+@XmlRootElement
+public class EntryDto {
+
+    @XmlElement
+    private String comment;
+
+    @XmlElement
+    private String category;
+
+    @XmlElement
+    private BigDecimal amount;
+
+    @XmlElement
+    private String date;
+
+    public EntryDto() {
+    }
+
+    public EntryDto(String print, BigDecimal amount, String category, String comment) {
+
+        this.date = print;
+        this.amount = amount;
+        this.category = category;
+        this.comment = comment;
+    }
+
+    public BigDecimal getAmount() {
+        return this.amount;
+    }
+
+    public String getComment() {
+        return comment;
+    }
+
+    public String getCategory() {
+        return category;
+    }
+
+    public String getDate() {
+        return date;
+    }
+
+}
+</code></pre>.
+            </section>

@@ -18,7 +18,7 @@
         <link rel="stylesheet" media="screen" href="extensions/scale/deck.scale.css">
 
         <!-- Style theme. More available in /themes/style/ or create your own. -->
-        <link rel="stylesheet" media="screen" href="styles/mnml.css">
+        <link rel="stylesheet" media="screen" href="themes/style/mnml.css">
 
         <!-- Transition theme. More available in /themes/transition/ or create your own. -->
         <link rel="stylesheet" media="screen" href="themes/transition/horizontal-slide.css">
@@ -27,11 +27,12 @@
         <link rel="stylesheet" media="print" href="core/print.css">
 
         <!-- Required Modernizr file -->
-        <script src="modernizr.custom.js"></script>
+        <script src="lib/modernizr.custom.js"></script>
 
 
-        <link rel="stylesheet" href="styles/default.css">
-        <script src="highlight.pack.js"></script>
+        <!-- highlightJS -->
+        <link rel="stylesheet" href="lib/highlight/styles/default.css">
+        <script src="lib/highlight/highlight.pack.js"></script>
         <script>hljs.initHighlightingOnLoad();</script>
         
     </head>
@@ -39,77 +40,14 @@
         <div class="deck-container">
 
             <!-- Begin slides. Just make elements with a class of slide. -->
-
-            <section class="slide">
+            <section id="intro" class="slide lazyload">
                 <h1>Slide</h1>
                 
                 <p>Story content</p>
             </section>
+            
+            
 
-            <section class="slide">
-                <h1>Content</h1>
-            </section>
-
-            <section class="slide">
-                <h1>Here</h1>
-                
-                <pre><code class="java">
-package de.omilke.banking.account.view;
-
-import java.math.BigDecimal;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlRootElement;
-
-/**
- * Serializable DTO for usage in the REST API.
- *
- * @author omilke &lt;ollimi85@gmail.com&gt;
- */
-@XmlRootElement
-public class EntryDto {
-
-    @XmlElement
-    private String comment;
-
-    @XmlElement
-    private String category;
-
-    @XmlElement
-    private BigDecimal amount;
-
-    @XmlElement
-    private String date;
-
-    public EntryDto() {
-    }
-
-    public EntryDto(String print, BigDecimal amount, String category, String comment) {
-
-        this.date = print;
-        this.amount = amount;
-        this.category = category;
-        this.comment = comment;
-    }
-
-    public BigDecimal getAmount() {
-        return this.amount;
-    }
-
-    public String getComment() {
-        return comment;
-    }
-
-    public String getCategory() {
-        return category;
-    }
-
-    public String getDate() {
-        return date;
-    }
-
-}
-</code></pre>.
-            </section>
 
             <!-- End slides. -->
 
@@ -140,7 +78,7 @@ public class EntryDto {
         </div>
 
         <!-- Required JS files. -->
-        <script src="jquery.min.js"></script>
+        <script src="lib/jquery.min.js"></script>
         <script src="core/deck.core.js"></script>
 
         <!-- Extension JS files. Add or remove as needed. -->
@@ -149,6 +87,9 @@ public class EntryDto {
         <script src="extensions/status/deck.status.js"></script>
         <script src="extensions/navigation/deck.navigation.js"></script>
         <script src="extensions/scale/deck.scale.js"></script>
+        
+        <script src="extensions/deck.events.js"></script>
+        <script src="extensions/deck.lazyload.js"></script>
 
         <!-- Initialize the deck. You can put this in an external file if desired. -->
         <script>
